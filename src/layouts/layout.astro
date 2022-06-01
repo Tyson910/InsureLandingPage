@@ -1,0 +1,26 @@
+---
+// import MainHead from '../components/MainHead.astro';
+// import Button from '../components/Button/index.jsx';
+// import Footer from '../components/Footer/index.jsx';
+// import Nav from '../components/Nav/index.jsx';
+
+const { title, meta_title, meta_description, content } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <!-- <MainHead title={content.title} description={meta_description} /> -->
+  </head>
+
+  <body>
+    <!-- <Nav /> -->
+    <header>
+      <!-- <h1 class="title">{content.title}</h1> -->
+    </header>
+    <main>
+      <slot />
+      <!-- children will go here -->
+    </main>
+    <!-- <Footer /> -->
+  </body>
+</html>
