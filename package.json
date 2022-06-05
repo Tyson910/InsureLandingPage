@@ -1,5 +1,5 @@
 {
-  "name": "@example/portfolio",
+  "name": "InsuranceLandingPage",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -20,6 +20,7 @@
     "react-dom": "^18.1.0"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
     "preact": "^10.7.2"
   }
 }
