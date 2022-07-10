@@ -1,28 +1,59 @@
 ---
-// Component Imports
-// import MainHead from '../components/MainHead.astro';
-// import Button from '../components/Button/index.jsx';
-// import Nav from '../components/Nav/index.jsx';
-// import Footer from '../components/Footer/index.jsx';
-// import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
-
-// Data Fetching: List all Markdown posts in the repo.
-// const projects = await Astro.glob('./project/**/*.md');
-// const featuredProject = projects[0];
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+import Layout from "@layouts/layout.astro";
+import Feature from "@components/Feature.astro";
+import { UserIcon } from "@heroicons/react/outline/index.js";
+import {
+  LightningBoltIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/solid/index.js";
+import { Hero } from "@components/Hero.jsx";
 ---
 
-<html lang="en">
-  <head>
-    <!-- <MainHead title="Jeanine White: Personal Site" description="Jeanine White: Developer, Speaker, and Writer..." /> -->
-  </head>
-  <body>
-    <!-- <Nav /> -->
-    <main>
-      <!-- Content Here -->
-    </main>
-    <!-- <Footer /> -->
-  </body>
-</html>
+<Layout>
+  <Hero />
+  <section class="container mt-36 lg:mt-80">
+    <h3
+      class="text-center font-semibold text-8xl lg:text-5xl font-serif lg:mb-16"
+    >
+      We’re different
+    </h3>
+    <div
+      class="grid grid-cols-1 lg:grid-cols-3 px-20 gap-y-44 my-44 lg:gap-x-7 lg:mt-16"
+    >
+      <Feature highlight="Snappy Process">
+        <LightningBoltIcon slot="icon" />
+        <p slot="description">
+          Our application process can be completed in minutes, not hours. Don’t
+          get stuck filling in tedious forms.
+        </p>
+      </Feature>
+      <Feature highlight="Affordable Prices">
+        <CurrencyDollarIcon slot="icon" />
+        <p slot="description">
+          We don’t want you worrying about high monthly costs. Our prices may be
+          low, but we still offer the best coverage possible.
+        </p>
+      </Feature>
+      <Feature highlight="People First">
+        <UserIcon slot="icon" />
+        <p slot="description">
+          Our plans aren’t full of conditions and clauses to prevent payouts. We
+          make sure you’re covered when you need it.
+        </p>
+      </Feature>
+    </div>
+  </section>
+  <div
+    class="hidden lg:grid lg:grid-cols-4 items-center container bg-dark-violet text-white lg:py-16 lg:px-8 lg:my-44"
+  >
+    <p class="lg:text-5xl lg:col-span-2 font-serif">
+      Find out more <br /> about how we work
+    </p>
+    <a
+      class={`border-white border lg:col-start-4 
+            px-4 py-2 max-w-max uppercase no-underline
+            hover:bg-white hover:text-dark-violet`}
+      href="#">How we work</a
+    >
+  </div>
+</Layout>
