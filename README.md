@@ -1,14 +1,4 @@
-# Astro Starter Kit: Portfolio
-
-```
-npm init astro -- --template portfolio
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🧞 Commands
+# 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -21,4 +11,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [Astro's documentation](https://docs.astro.build)
