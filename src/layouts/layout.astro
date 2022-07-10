@@ -1,26 +1,21 @@
 ---
-// import MainHead from '../components/MainHead.astro';
-// import Button from '../components/Button/index.jsx';
-// import Footer from '../components/Footer/index.jsx';
-// import Nav from '../components/Nav/index.jsx';
-
-const { title, meta_title, meta_description, content } = Astro.props;
+import "@styles/global.css";
+import Nav from "@components/Nav.astro";
+import Footer from "@components/Footer.astro";
 ---
 
 <html lang="en">
   <head>
-    <!-- <MainHead title={content.title} description={meta_description} /> -->
+    <title>Insure</title>
+    <link rel="icon" href="/assets/favicon-32x32.png" />
+    <meta name="description" content="Insure is an Insurance company" />
   </head>
-
-  <body>
-    <!-- <Nav /> -->
-    <header>
-      <!-- <h1 class="title">{content.title}</h1> -->
-    </header>
+  <body class="font-sans-serif scroll-smooth">
+    <Nav />
     <main>
-      <slot />
       <!-- children will go here -->
+      <slot />
     </main>
-    <!-- <Footer /> -->
+    <Footer />
   </body>
 </html>
