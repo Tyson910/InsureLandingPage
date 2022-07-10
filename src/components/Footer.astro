@@ -1,0 +1,65 @@
+---
+import Logo from "/assets/logo.svg";
+import FacebookLogo from "/assets/icon-facebook.svg";
+import TwitterLogo from "/assets/icon-twitter.svg";
+import PinterestLogo from "/assets/icon-pinterest.svg";
+import InstagramLogo from "/assets/icon-instagram.svg";
+const footerLinks = [
+  {
+    heading: "Our company",
+    sublinks: ["How we work", "Why Insure?", "View plans", "Reviews"],
+  },
+  {
+    heading: "Help me",
+    sublinks: ["FAQS", "Terms of Use", "Privacy Policy", "Cookies"],
+  },
+  {
+    heading: "Contact",
+    sublinks: ["Sales", "Support", "Live Chat"],
+  },
+  {
+    heading: "Others",
+    sublinks: ["Careers", "Press", "Licenses"],
+  },
+];
+---
+<style>
+  @media(max-width:1023px){
+    img{
+       @apply w-16 h-16;
+     }
+  }
+</style>
+<footer class="bg-[hsl(0,0%,98%)] pb-16">
+  <nav class="container flex flex-col lg:flex-row items-center lg:items-start lg:justify-between py-10 mb-10 border-b">
+    <a href="#top">
+      <img src={Logo} class="!w-56 !h-56 lg:!w-auto lg:!h-auto" />
+    </a>
+    <div class="space-x-12 lg:space-x-6 flex flex-row lg:items-center">
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"> <img src={FacebookLogo}
+          alt="Facebook" />
+        </a>
+      <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"> <img src={TwitterLogo}
+          alt="Twitter" /> </a>
+      <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer"> <img src={PinterestLogo}
+          alt="Pinterest" /> </a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"> <img src={InstagramLogo}
+          alt="Instagram" /> </a>
+    </div>
+  </nav>
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-y-36 lg:gap-y-0 pt-28 lg:pt-0 container uppercase">
+    {footerLinks.map(({heading, sublinks}) => <div class="flex flex-col">
+      <p class="text-[hsl(216,30%,68%)] mb-10 lg:mb-5 text-5xl lg:text-lg">{heading}</p>
+      <div class="flex flex-col gap-y-7 lg:gap-y-0">{sublinks.map((link) => <a href="#"
+          class="no-underline hover:underline font-medium text-4xl lg:text-base text-[hsl(216,30%,30%)]">{link}</a>)}</div>
+    </div> )}
+  </div>
+
+  <!-- 
+    <div>
+    Challenge by <a
+      href="https://www.frontendmentor.io?ref=challenge"
+      target="_blank">Frontend Mentor</a
+    > Coded by <a href="tyson-suttle.vercel.app">Tyson Suttle</a>.
+  </div> -->
+</footer>
