@@ -1,0 +1,33 @@
+---
+import Logo from "/assets/logo.svg";
+---
+
+<header class="sticky top-0 z-10 bg-white shadow-lg lg:shadow-sm">
+  <nav
+    class="flex flex-row justify-center lg:justify-between container py-20 lg:py-10"
+  >
+    <a href="#top" class="hidden lg:block">
+      <img src={Logo} alt="Our Logo" />
+    </a>
+    <div class="space-x-10">
+      <a href="#">How we work</a>
+      <a href="#" class="hidden lg:inline">Blog</a>
+      <a href="#">Account</a>
+      <a
+        class="mt-7 lg:!text-dark-violet border-dark-violet lg:border-2 
+    px-4 py-2 max-w-max lg:uppercase 
+    hover:bg-dark-violet hover:!text-white hover:!no-underline"
+        href="#">View plans</a
+      >
+    </div>
+  </nav>
+</header>
+
+<style>
+  a {
+    @apply lg:no-underline text-5xl lg:text-lg text-dark-violet lg:text-[hsl(216,30%,68%)];
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
