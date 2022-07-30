@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "start": "astro dev",
-    "build": "npm run clean-up-src-code && astro build",
+    "build": "astro build",
     "clean-up-src-code": "npx prettier --write ./src/**/**",
-    "preview": "astro preview"
+    "preview": "astro preview --host"
   },
   "devDependencies": {
     "@astrojs/preact": "^0.1.3",
