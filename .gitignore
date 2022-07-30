@@ -1,6 +1,5 @@
 # build output
-# commenting this out to remove complexity, simple one page site can be built locally
-# dist/
+dist/
 
 # dependencies
 node_modules/
