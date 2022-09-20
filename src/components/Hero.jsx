@@ -5,8 +5,10 @@ export function Hero() {
 
   return (
     <>
-      <header className="bg-dark-violet text-white grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:px-36">
-        <div className="p-20 lg:p-0 items-center flex flex-col gap-y-16 lg:gap-y-5 lg:pt-36">
+      <header className="bg-dark-violet text-white w-full">
+      <div className="xl:container grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:px-36">
+
+        <div className="p-20 lg:p-0 items-center flex flex-col gap-y-16 lg:gap-y-5 lg:pt-36 ">
           <h1 className="font-semibold text-8xl lg:text-5xl font-serif">
             Humanizing your insurance.
           </h1>
@@ -35,6 +37,7 @@ export function Hero() {
           className="block w-full row-start-1 lg:hidden"
           alt=""
         />
+      </div>
       </header>
     </>
   );
